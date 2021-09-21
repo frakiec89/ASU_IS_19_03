@@ -19,7 +19,6 @@ namespace ASU_IS_19_03.DB.Model
         /// </summary>
         public bool Operation { get; set; }
 
-
         public int PrinterId { get; set; }
         public virtual Printer Printer { get; set; }
 
