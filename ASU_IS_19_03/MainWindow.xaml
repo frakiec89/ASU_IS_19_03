@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ASU_IS_19_03"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="База данных"  SizeToContent="WidthAndHeight">
+    <Window.Resources>
+       
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#999933"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="MinWidth" Value="150"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
+        <StackPanel Margin="20">
+            <Button  Margin="5" Padding="10"
+                    Name="btSklad"
+                    >Склады</Button>
+
+            <Button  Margin="5" Padding="10"
+                    Name="btManufacturers"
+                    >Производители</Button>
+            <Button  Margin="5" Padding="10"
+                    Name="btTypePrint"
+                    >Виды принтеров</Button>
+
+            <Button  Margin="5" Padding="10"
+                    Name="btPrint"
+                    >Список принтеров</Button>
+
+            <Button  Margin="5" Padding="10"
+                    Name="btPrintSklad"
+                    >Принтеры на складе</Button>
+
+        </StackPanel>
 
     </Grid>
 </Window>
