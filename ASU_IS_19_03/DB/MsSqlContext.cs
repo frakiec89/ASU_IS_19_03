@@ -17,7 +17,7 @@ namespace ASU_IS_19_03.DB
 
         protected override void OnConfiguring (DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer(connect);
+           builder.UseSqlServer(connect);
         }
     }
 }
