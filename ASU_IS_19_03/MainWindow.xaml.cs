@@ -23,6 +23,13 @@ namespace ASU_IS_19_03
         public MainWindow()
         {
             InitializeComponent();
+            btSklad.Click += BtSklad_Click;
+        }
+
+        private void BtSklad_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.SkladWindows windows = new Forms.SkladWindows();
+            windows.Show();
         }
     }
 }
