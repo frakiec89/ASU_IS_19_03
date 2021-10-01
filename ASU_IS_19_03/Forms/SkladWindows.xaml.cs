@@ -43,5 +43,37 @@ namespace ASU_IS_19_03.Forms
                 datagridSklad.ItemsSource = content;// отдали коллекцию таблице
             }
         }
+       
+        private void tbDel_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            DB.Model.Sklad sklad = button.DataContext as DB.Model.Sklad;
+            if (sklad!=null)
+            {
+                string message = $"Вы уверены что хотите удалить: \n {sklad.Adress} из базы данный";
+
+                if (
+                    MessageBox.Show(message , 
+                    "Удаление" , MessageBoxButton.YesNo )
+                    == MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        DB.MsSqlContext context = new DB.MsSqlContext();
+                        context.Sklads.Remove(sklad);
+                        context.SaveChanges();
+                        MessageBox.Show("Удаление  прошло");
+
+                        DB.MsSqlContext sqlContext = new DB.MsSqlContext(); // экземпляр подключения
+                        var content = sqlContext.Sklads.ToList(); // получили коллекцию 
+                        datagridSklad.ItemsSource = content;// отдали коллекцию таблице
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
     }
 }

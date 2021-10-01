@@ -21,14 +21,26 @@
             <DataGrid Margin="10" 
                       x:Name="datagridSklad"
                       AutoGenerateColumns="False"
+                      CanUserAddRows="False"
                       >
                 <DataGrid.Columns>
                     <DataGridTextColumn 
                         Header="Адрес склада" 
                         Binding="{Binding Adress}"
                         />
+                    
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button  x:Name="tbDel"
+                                        Click="tbDel_Click"
+                                        >Удалить
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    
                 </DataGrid.Columns>
-                
             </DataGrid>
         </StackPanel>
     </Grid>
