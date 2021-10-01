@@ -32,7 +32,7 @@
                     >Виды принтеров</Button>
 
                 <Button  Margin="5" Padding="10"
-                    Name="btPrint"
+                    Name="btPrint" Click="btPrint_Click" 
                     >Список принтеров</Button>
 
                 <Button  Margin="5" Padding="10"

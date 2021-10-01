@@ -31,5 +31,11 @@ namespace ASU_IS_19_03
             Forms.SkladWindows windows = new Forms.SkladWindows();
             windows.Show();
         }
+
+        private void btPrint_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.PpintersWindow ppintersWindow = new Forms.PpintersWindow();
+            ppintersWindow.Show();
+        }
     }
 }
